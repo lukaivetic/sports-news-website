@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Najnovije sportske vesti">
+    <meta name="keywords" content="sport, vesti, fudbal, košarka, tenis"> 
+    <title>Sportske Vesti</title>
+    <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+    <header>
+    <div class="zaglavlje-sadrzaj">
+        <div class="levo">
+            <img src="logo.png" alt="Logo" class="logo" id="logo">
+
+        </div>
+
+        <div class="sredina">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="o-nama.html">O nama</a></li>
+                    <li><a href="proizvod.html">Usluge</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        <div class="desno">
+        <button id="dugme-tema">Promeni temu</button>
+        <button id="uvelicavanjeFonta" class="dugme-font">+</button>
+        <button id="smanjenjeFonta" class="dugme-font">−</button>
+        <button id="pocetnevrednosti">Vrati na default</button>
+
+
+
+            <div class="traka-pretrage">
+                <input type="text" id="unos-pretrage" placeholder="Pretraži...">
+                <button id="dugmePretraga">Pretraži</button>    
+            </div>
+        </div>
+    </div>
+
+    <div class="hamburger-meni">
+        <div class="hamburger-ikonica">&#9776;</div>
+        <div class="padajucimeni">
+            <a href="svevesti.html">Sve vesti</a>
+            <a href="fudbal.html">Fudbal</a>
+            <a href="kosarka.html">Košarka</a>
+            <a href="tenis.html">Tenis</a>
+            <a href="odbojka.html">Odbojka</a>
+            <a href="vaterpolo.html">Vaterpolo</a>
+            <a href="esport.html">Esport</a>
+            <a href="predstojece.html">Predstojeće</a>
+        </div>
+    </div>
+</header>
+    <main>        
+        <section class="vesti">
+            <h2 class="glow">Izdvajamo:</h2>
+            <div class="red-vesti">
+                <article class="prviokvir" id="prvavest">
+                    <a href="prvavest.html">
+                        <img src="slika1.webp" alt="Opis slike" id="prvaslika">
+                        <h3>LESSORT SPREMAN ZA FINAL FOUR? Oglasio se Ataman!</h3>
+                    </a>
+                </article>
+                <article class="prviokvir" id="drugavest">
+                    <a href="drugavest.html">
+                        <img src="slika2.webp" alt="Opis slike" id="drugaslika">
+                        <h3>CIRKUS, ANTI-FUDBAL I NESREĆNI JUNAJTED: Totenhem osvojio Ligu Evrope!</h3>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="tekst">&copy; 2025 Sportske Vesti</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

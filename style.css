@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    flex-direction: column; 
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #ffcc00;
+    width: 100%;
+    margin: 0;
+    position: relative;  
+
+}
+
+.zaglavlje-sadrzaj {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.levo, .sredina, .desno {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.sredina {
+    justify-content: center;
+}
+
+.desno {
+  
+  justify-content: flex-start; 
+
+    
+}
+
+.levo {
+    justify-content: flex-start;
+}
+
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    margin-left:0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+  margin: 0 25px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+
+
+.traka-pretrage input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.traka-pretrage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px; 
+    width:100%;
+    margin-left:100px;
+}
+
+
+.traka-pretrage button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-left:265px;
+    margin-top:-20px;
+
+}
+
+
+.traka-pretrage button:hover {
+    background-color: #0088cc;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.prvavest {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    font-size: 23px;
+}
+
+
+.slika-kontejner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#trecaslika {
+    width: 675px;
+    display: block;
+}
+#prvaslika {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+#drugaslika {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+.prviokvir {
+    border: 5px solid #ffcc00;
+    display: inline-block;
+    margin: 20px 0 0 0;
+    background-color: black;
+    color: white;
+    width: 675px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.prviokvir img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.prviokvir h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    font-size: 23px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .traka-pretrage {
+        display: none;
+    }
+
+    .slika-kontejner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #prvaslika, #drugaslika {
+        width: 100%;
+    }
+    
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background-color: #131313;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border: 5px solid #ffcc00;
+    margin-top:15px;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slajder-tekst {
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.carousel-item.active .slajder-tekst {
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+.red-vesti {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.prviokvir {
+    width: 45%;
+    
+}
+.hamburger-meni {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.hamburger-ikonica {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    background-color: #131313;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.padajucimeni {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    border: 2px solid #ffcc00;
+    border-top: none;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.padajucimeni a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #333;
+}
+
+.padajucimeni a:hover {
+    background-color: #333;
+}
+
+.hamburger-meni:hover .padajucimeni {
+    display: flex;
+}
+#onama {
+    font-family: 'Arial', sans-serif; 
+    font-size: 22px; 
+    line-height: 1.6; 
+    color: white; 
+    text-align: justify; 
+    margin: 20px 0; 
+    margin-top:50px;
+    padding: 0 10px; 
+    border-radius: 5px; 
+}
+#proizvod {
+    font-family: 'Arial', sans-serif; 
+    font-size: 22px; 
+    line-height: 1.6; 
+    color: white; 
+    text-align: justify; 
+    margin: 20px 0; 
+    margin-top:50px;
+    padding: 0 10px; 
+    border-radius: 5px; 
+}
+#kontakt {
+    font-family: 'Arial', sans-serif; 
+    font-size: 22px; 
+    line-height: 1.6; 
+    color: white; 
+    text-align: justify; 
+    margin: 20px 0; 
+    margin-top:50px;
+    padding: 0 10px;
+    border-radius: 5px; 
+}
+.forma-okvir {
+    display: flex;
+    align-items: flex-start;  
+    gap: 20px;                
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: white;  
+}
+
+.tekstpolje-okvir {
+    position: relative;
+    height: calc(100vh - 150px); 
+    overflow: hidden; 
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; 
+    overflow: auto; 
+    box-sizing: border-box; 
+    margin-top: 10px; 
+    height: 40px; 
+    margin-top:50px;
+}
+
+
+
+ textarea:focus {
+    border-color: #00aaff; 
+    outline: none;         
+    background-color: #f0f0f0; 
+}
+#fiksnifooter footer {
+    background-color: #131313;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;  
+    border: 5px solid #ffcc00;
+}
+
+#dugmezaporuku {
+    width: 100px;            
+    height: 45px;            
+    padding: 0;              
+    font-size: 13px;        
+    background-color: yellow; 
+    color: black;            
+    border: none;            
+    border-radius: 4px;      
+    cursor: pointer;       
+    transition: background-color 0.3s ease; 
+    margin-left: 360px;
+    margin-top: 36px;
+    text-align: center;      
+    line-height: 45px;       
+    display: inline-block;  
+}
+
+#dugmezaporuku:hover {
+    background-color: #928c0f; 
+}
+
+.logo {
+    width:50px;    
+    height: 50px;  
+}
+
+.vest-slika {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-top:15px;
+}
+.vest-desno h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0; 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.vest-desno h3 {
+    font-size:20px;
+    color:white;
+}
+
+.vest-desno p {
+    font-size:20px;
+    color:white;
+    margin-top:10px;
+}
+main {
+    flex-grow: 1; 
+}
+#predstojece-page {
+    background-color: #111; 
+    font-size: 16px; 
+}
+
+#predstojece-page h2 {
+    color: #ffcc00; 
+}
+
+#predstojece-page .vest-slika {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+
+#predstojece-page #dugmezaporuku {
+    background-color: #ffcc00; 
+    color: black;
+}
+
+#predstojece-page .traka-pretrage input {
+    width: 100%; 
+}
+
+#predstojece-page header {
+    background-color: #131313;
+    color: #fff;
+}
+
+.slajder-okvir {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.slajder{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slajderelement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:540px;
+    margin-top:45px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slajderelement img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slajder-tekst {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align:center;
+    margin-left:19px;
+}
+
+.slajder-tekst h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slajder-tekst p {
+    font-size: 16px;
+}
+
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+body.svetla-tema {
+  background-color: #fff;   
+  color: #000;              
+}
+
+body.svetla-tema nav ul li a,
+body.svetla-tema a {
+  color: blue;              
+}
+
+body.svetla-tema header,
+body.svetla-tema footer {
+  background-color: #fff;  
+  border-color: blue;      
+}
+
+body.svetla-tema .prviokvir {
+  background-color: #fff;   
+  border-color: blue;       
+}
+
+body.svetla-tema .prviokvir h3 {
+  background: rgba(255,255,255,0.6); 
+  color: #000;                       
+}
+
+body.svetla-tema .slajder-tekst {
+  background-color: rgba(255,255,255,0.5);
+  color: #000;
+}
+
+body.svetla-tema #dugme-tema {
+  background-color: #28a745;
+}
+body.svetla-tema .padajucimeni{
+ background-color: white;
+ color:black;
+ text-decoration-color:black;
+
+}
+body.svetla-tema .hamburger-ikonica{
+ background-color: white;
+ color:black;
+
+}
+body.svetla-tema .tekst{
+
+    color:black;
+}
+body.svetla-tema #onama{
+
+    color:black;
+}
+body.svetla-tema #proizvod{
+
+    color:black;
+}
+body.svetla-tema #kontakt{
+
+    color:black;
+}
+
+body.svetla-tema #kontaktfooter {
+    background-color: white; 
+    color: black;
+    border: 5px solid blue;
+}
+
+body.svetla-tema #predstojeceheader {
+  background-color: #fff;   
+  border-color: blue;       
+}
+#dugme-tema {
+    top: 100px;          
+    left: 3px;         
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;    
+    font-size: 14px;     
+    border: none;
+    border-radius: 6px;  
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    z-index: 9999;
+}
+
+
+#uvelicavanjeFonta {
+    top: 155px;
+    left: 1px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid gold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 9999;
+}
+
+#smanjenjeFonta{
+    top: 200px;
+    left: 1px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid gold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 9999;
+}
+
+#dugme-tema:hover {
+     background-color: #0056b3; 
+    transform: scale(1.05);
+}
+#obavestenje {
+    display: none; 
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #4CAF50; 
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#obavestenje.show {
+    display: block;
+    opacity: 1;
+}
+#uvelicavanjeFonta:hover,
+#smanjenjeFonta:hover {
+    background-color: #333; 
+}
+.glow {
+    text-shadow: 0 0 10px rgba(255, 204, 0, 1), 
+                 0 0 20px rgba(255, 204, 0, 1), 
+                 0 0 30px rgba(255, 204, 0, 1);
+
+    
+}
+@media (max-width: 480px) {
+    .zaglavlje-sadrzaj {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .levo, .sredina, .desno {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .prviokvir {
+        width: 90%;
+        height: auto;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .traka-pretrage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap:8px;
+    }
+
+    .traka-pretrage input,
+    .traka-pretrage button {
+        width: 90%;
+        margin: 5px 0;
+        margin-left: 0;
+        margin-top:70px;
+    }
+
+    .red-vesti {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    #trecaslika {
+        width: 100%;
+    }
+}
+.footer-custom {
+   background-color: #131313;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border: 5px solid #ffcc00;
+    margin-top:15px;
+    height:90px;
+}
+
+.footer-tekst {
+    padding-top: 10px; 
+}
+
+.logop
+{
+    width:50px;    
+    height: 50px;  
+    margin-left:-180px;
+
+}
+section.prviokvir {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0 auto; 
+    width: 80%; 
+    max-width: 1000px; 
+}
+body#predstojecestranica.svetla-tema header a {
+  color: black;
+}
+
+body#predstojecestranica.svetla-tema .nav-link {
+  color: black !important;
+}
+
+body#predstojecestranica.svetla-tema footer {
+  color: black;
+}
+body.svetla-tema #uvelicavanjeFonta {
+  background-color: white;
+  color: black;
+   border: 2px solid blue;
+}
+body.svetla-tema #smanjenjeFonta {
+  background-color: white;
+  color: black;
+   border: 2px solid blue;
+}
+ #pocetnevrednosti {
+    top: 100px;           
+    left: 140px;          
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;    
+    font-size: 14px;      
+    border: none;
+    border-radius: 6px;   
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 9999;
+}
+
+
+#pocetnevrednosti:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+}
+
+#pocetnevrednosti:active {
+    transform: scale(0.97);
+}
+body.svetla-tema #pocetnevrednosti {
+    background-color: #28a745; 
+}
+
+body.svetla-tema #pocetnevrednosti:hover {
+    background-color: #1e7e34;
+}
+#dugme-tema:active {
+    transform: scale(0.97);
+}
+
+#dugmePretraga {
+    height: 40px; 
+    line-height: 40px; 
+    font-size: 16px; 
+    padding: 0 15px; 
+    box-sizing: border-box;
+    vertical-align: middle;
+    overflow: hidden; 
+}
+.nema-rezultata {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4d4d; 
+    margin-top: 20px;
+}
+.carousel-item {
+    height: 500px; 
+}
+
+.carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; 
+}
+ .slajder-tekst {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+        }
+.footer-tekst {
+            margin: 0;
+        }
+         .footer-custom {
+        background-color: black; 
+        color: #fff; 
+        padding: 20px 0; 
+        }
+
+        .svetla-tema .footer-custom {
+        background-color: #fff; 
+        color: #000;
+        }
+        #predstojeceheader {
+        background-color: #000; 
+        color: #fff; 
+        }
+
+       .svetla-tema #predstojeceheader {
+        background-color: #fff; 
+       color: blue; 
+       }

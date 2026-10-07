@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakt - Sportske vesti">
+    <meta name="keywords" content="kontakt, sportske vesti">
+    <title>Kontakt - Sportske Vesti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fiksnifooter">
+    <header>
+        <div class="zaglavlje-sadrzaj">
+             <img src="logo.png" alt="Logo" class="logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="o-nama.html">O nama</a></li>
+                    <li><a href="proizvod.html">Usluge</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="kontaktt">
+            <h2 class="tekst">Kontaktirajte nas</h2>
+            <p id="kontakt" class="text">Ukoliko želite da nas kontaktirate, popunite sledeća polja i pošaljite nam poruku. Trudićemo se da odgovorimo u što kraćem roku.</p>
+            <form id="kontakt-forma">
+                <label id="kontakt">Ime i Prezime:</label>
+                <input type="text" id="ime" name="ime" required>
+                
+                <label id="kontakt" class="tekst">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <div class="forma-okvir">
+                    <label id="kontakt" class="tekst">Poruka:</label>
+                    <div class="tekstpolje-okvir">
+                        <textarea id="poruka" name="poruka" required></textarea>
+                    </div>
+                </div>
+                
+            <button id="dugmezaporuku" type="submit" class="btn-bold">Pošaljite poruku</button>
+            </form>
+
+            <div id="obavestenje" style="display:none; color:black; margin-top: 20px;">
+                Poruka je uspešno poslata!
+            </div>
+        </section>
+
+        <footer id="kontaktfooter">
+            <p class="tekst">&copy; 2025 Sportske Vesti</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
